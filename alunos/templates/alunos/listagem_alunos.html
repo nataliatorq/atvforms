@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Alunos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+
+    <link href="{% static 'alunos/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Listagem de alunos</a>
+            <div class="ml-auto">
+                <a href="{% url 'cadastro_aluno' %}" class="btn btn-cadastrar">Cadastrar</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Cidade</th>
+                    <th>Email</th>
+                    <th>Curso</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for aluno in alunos %}
+                <tr>
+                    <td>{{ aluno.nome }}</td>
+                    <td>{{ aluno.endereco }}</td>
+                    <td>{{ aluno.cidade }}</td>
+                    <td>{{ aluno.email }}</td>
+                    <td>{{ aluno.curso }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

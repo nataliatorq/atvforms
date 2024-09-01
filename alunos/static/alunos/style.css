@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #fda8d8; /* Rosa claro */
+    padding: 10px;
+}
+
+.navbar-brand {
+    margin: auto;
+    font-weight: bold;
+    font-size: 24px;
+    color: black; /* Ajuste a cor conforme necessário */
+}
+
+.btn-cadastrar {
+    background-color: #fda8d8; /* Rosa */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-cadastrar:hover {
+    background-color: #e895c2; /* Um tom mais escuro de rosa para o hover */
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+
+}

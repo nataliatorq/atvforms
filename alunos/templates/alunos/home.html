@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'alunos/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Matrícula de aluno</a>
+            <div class="ml-auto">
+                <a href="{% url 'cadastro_aluno' %}" class="btn btn-cadastrar">Cadastrar</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Bem-vindo ao sistema de matrícula </h2>
+        <p><a href="{% url 'listagem_alunos' %}" class="btn btn-secondary">Listar alunos</a></p>
+    </div>
+</body>
+</html>

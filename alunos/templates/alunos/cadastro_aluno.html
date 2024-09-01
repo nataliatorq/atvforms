@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+
+    <link href="{% static 'alunos/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Matrícula de aluno</a>
+            <div class="ml-auto">
+                <a href="{% url 'home' %}" class="btn btn-cadastrar">Voltar</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
